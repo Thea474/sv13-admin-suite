@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server_suite.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server_suite.py"
+    }
+  ],
+  "projectSettings": {
+    "framework": null,
+    "buildCommand": null,
+    "installCommand": "pip install -r requirements.txt",
+    "outputDirectory": "."
+  }
+}
+
